@@ -4,6 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>起動画面</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<h1>起動されたかな？</h1>
+<body>
+    <div class="content">
+        <img src="img/icon_chicken.png" alt="Chicken Icon">
+
+        <h1>おいしい性格診断</h1>
+        <h2>～鶏肉らぶ～</h2>
+    </div>
+
+    <!--ユーザが画面をクリックもしくは、５秒後に画面移動-->
+    <script>
+        function redirectToNextPage() {
+            window.location.href = "selectA.html"; 
+        }
+
+        setTimeout(redirectToNextPage, 5000);
+
+        document.body.addEventListener("click", redirectToNextPage);
+    </script>
+
+</body>
