@@ -64,7 +64,9 @@ buttons.forEach(button => {
 });
 
 // id="displayButton"のボタンが押された場合（テスト用）
-document.getElementById('displayButton').addEventListener('click', () => {
+window.addEventListener('click',()=>{
+    const display = document.getElementById('displayButton');
+    if (!display){ return false;}
     displayWhichButton();
 });
 
