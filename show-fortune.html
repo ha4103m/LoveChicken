@@ -3,25 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>占いスタート画面</title>
+    <title>占い結果画面</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="content">
         <img src="img/icon_chickenboy1.png" alt="chickenboy1">
-        <button onclick="goToNextPage()">占いスタート</button>
 
         <!--test-->
         <div id="output-container"></div>
-        <button id="displayButton">Show Button Data</button>
+        <button id="displayResult">Show Button Data</button>
     </div>
-    <script>
-        function goToNextPage() {
-          window.location.href = 'show-fortune.html';
-        }
-    </script>
 
-<!--test-->
-<script src="script.js"></script>
+    <script src="script.js"></script>
+    <script src="result.js"></script>
+
 </body>

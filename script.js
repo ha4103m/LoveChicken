@@ -1,6 +1,5 @@
 
-//var whichButton = [];
-
+// 画面移動の関数
 function redirectToNextPage() {
     const currentPage = window.location.pathname;
 
@@ -18,44 +17,44 @@ function redirectToNextPage() {
 
 }
 
+// 料理配列に値を入れる関数
 function addToVariable(button) {
     const currentPage = window.location.pathname;
+    const pageName = currentPage.substring(currentPage.lastIndexOf('/') + 1);
+    let buttonData = {page: pageName, button: button };
 
-    let buttonData = {button: button };
+    // selectA.htmlの場合は、料理配列を初期化する
+    if (currentPage.includes("selectA.html")) {
+        localStorage.removeItem('whichButton');
+    }
 
+    // 料理配列に値を入れ
     let whichButton = JSON.parse(localStorage.getItem('whichButton')) || [];
     whichButton.push(buttonData);
 
-    // Store the updated array back to localStorage
-    localStorage.setItem('whichButton', JSON.stringify(whichButton));
 
-    console.log(whichButton);
+    localStorage.setItem('whichButton', JSON.stringify(whichButton));
 }
 
-//
+//　料理配列の値を表示するための関数（テスト用）
 function displayWhichButton() {
-    const container = document.getElementById('output-container'); // Make sure there's an element with this ID in the HTML
-    container.innerHTML = ''; // Clear previous content
+    const container = document.getElementById('output-container');
+    container.innerHTML = '';
 
-    // Create a list to display the buttons
-    //const list = document.createElement('ul');
     let whichButton = JSON.parse(localStorage.getItem('whichButton')) || [];
 
     const list = document.createElement('ul');
     
     whichButton.forEach(item => {
         const listItem = document.createElement('li');
-        listItem.textContent = `Page: ${item.page}, Button: ${item.button}`;
+       listItem.textContent = `Page: ${item.page}, Button: ${item.button}`;
         list.appendChild(listItem);
     });
 
-    container.appendChild(list); // Append the list to the container
-
-    //
-    console.log(whichButton)
+    container.appendChild(list); 
 }
 
-
+// class="btn"のボタンが押された場合
 const buttons = document.querySelectorAll('.btn');
 
 buttons.forEach(button => {
@@ -65,7 +64,15 @@ buttons.forEach(button => {
     });
 });
 
-// If you want to display the buttons after a specific event
+// id="displayButton"のボタンが押された場合（テスト用）
 document.getElementById('displayButton').addEventListener('click', () => {
-    displayWhichButton(); // This will output the current state of `whichButton`
+    displayWhichButton();
+});
+
+// id="displayResult"のボタンが押された場合（テスト用）
+document.getElementById('displayResult').addEventListener('click', () => {
+    const result = getResultFromWhichButton();
+    if (result) {
+        alert("The result is: " + result);
+    }
 });
