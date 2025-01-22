@@ -32,7 +32,6 @@ function addToVariable(button) {
     let whichButton = JSON.parse(localStorage.getItem('whichButton')) || [];
     whichButton.push(buttonData);
 
-
     localStorage.setItem('whichButton', JSON.stringify(whichButton));
 }
 
@@ -69,10 +68,3 @@ document.getElementById('displayButton').addEventListener('click', () => {
     displayWhichButton();
 });
 
-// id="displayResult"のボタンが押された場合（テスト用）
-document.getElementById('displayResult').addEventListener('click', () => {
-    const result = getResultFromWhichButton();
-    if (result) {
-        alert("The result is: " + result);
-    }
-});
