@@ -102,3 +102,6 @@ function getResultFromWhichButton() {
         return null;
     }
 }
+
+    //test
+    console.log(whichButton)
