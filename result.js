@@ -91,7 +91,7 @@ function getResultFromWhichButton() {
 
         // 結果の値が存在する場合
         if (result) {
-            localStorage.setItem('resultNumber', result.result); // 結果の値をresultNumberとして保存
+            JSON.parse(localStorage.setItem('resultNumber', result.result)); // 結果の値をresultNumberとして保存
             return result.result;
         } else {
             alert("該当する結果の値が見つかりません。")
@@ -102,6 +102,3 @@ function getResultFromWhichButton() {
         return null;
     }
 }
-
-    //test
-    console.log(whichButton)
