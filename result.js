@@ -77,6 +77,9 @@ const combinations = [
 function getResultFromWhichButton() {
     let whichButton = JSON.parse(localStorage.getItem('whichButton')) || [];
 
+    //test
+    console.log(whichButton)
+
     // 料理配列が３つ以上の値が入っている場合
     if (whichButton.length >= 3) {
         const aValue = whichButton.find(item => item.page.includes("selectA.html"))?.button;

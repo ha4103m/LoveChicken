@@ -1,4 +1,3 @@
-console.log("display.js")
 
 // 結果の値をoutput-containerに表示する（テスト用）
 function displayStoredResult() {
