@@ -1,10 +1,12 @@
+console.log("display.js")
+
 // 結果の値をoutput-containerに表示する（テスト用）
 function displayStoredResult() {
     const resultNumber = localStorage.getItem('resultNumber');
 
     //test
     console.log(resultNumber)
-    
+
     const container = document.getElementById('output-container');
     container.innerHTML = '';
 
