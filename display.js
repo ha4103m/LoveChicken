@@ -1,7 +1,7 @@
 
 // 結果の値をoutput-containerに表示する（テスト用）
 function displayStoredResult() {
-    const resultNumber = localStorage.getItem('resultNumber');
+    const resultNumber = JSON.parse(localStorage.getItem('resultNumber'));
 
     //test
     console.log(resultNumber)
