@@ -73,6 +73,11 @@ const combinations = [
     {a: 'a4', b: 'b4', c: 'c4', result: 7}
 ];
 
+const displayButton = document.getElementById('displayResult');
+if (displayButton) {
+    displayButton.addEventListener('click', getResultFromWhichButton);
+}
+
 // ３つの選択からどの結果になるかを判別する関数
 function getResultFromWhichButton() {
     let whichButton = JSON.parse(sessionStorage.getItem('whichButton')) || [];
@@ -85,10 +90,10 @@ function getResultFromWhichButton() {
 
         // 料理配列の値から結果配列の最後の値を取得
         const result = combinations.find(comb => comb.a === aValue && comb.b === bValue && comb.c === cValue);
-
         // 結果の値が存在する場合
         if (result) {
-            JSON.parse(sessionStorage.setItem('resultNumber', result.result)); // 結果の値をresultNumberとして保存
+            sessionStorage.setItem('resultNumber', result.result); // 結果の値をresultNumberとして保存
+            displayStoredResult()
             return result.result;
         } else {
             alert("該当する結果の値が見つかりません。")

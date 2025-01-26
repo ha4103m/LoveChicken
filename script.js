@@ -14,6 +14,9 @@ function redirectToNextPage() {
 
     window.location.href = nextPage;
 
+        //test
+        console.log("HERE3")
+
 }
 
 // 料理配列に値を入れる関数
@@ -32,6 +35,9 @@ function addToVariable(button) {
     whichButton.push(buttonData);
 
     sessionStorage.setItem('whichButton', JSON.stringify(whichButton));
+
+        //test
+        console.log("HERE2")
 }
 
 // class="btn"のボタンが押された場合
@@ -42,4 +48,7 @@ buttons.forEach(button => {
         addToVariable(button.dataset.button); // Pass the button data to addToVariable
         redirectToNextPage(); // Proceed to the next page
     });
+
+        //test
+        console.log("HERE1")
 });

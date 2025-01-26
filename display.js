@@ -15,10 +15,10 @@ function displayStoredResult() {
 }
 
 // 「Show Button Data」ボタンが押された場合（テスト用）
-const displayButton = document.getElementById('displayResult');
+/*const displayButton = document.getElementById('displayResult');
 if (displayButton) {
     displayButton.addEventListener('click', displayStoredResult);
-}
+}*/
 
 // 【占いスタート】ボタンが押されたときの関数
 function goToNextPage() {
