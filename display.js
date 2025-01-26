@@ -1,7 +1,7 @@
 
 // 結果の値をoutput-containerに表示する（テスト用）
 function displayStoredResult() {
-    const resultNumber = JSON.parse(localStorage.getItem('resultNumber'));
+    const resultNumber = JSON.parse(sessionStorage.getItem('resultNumber'));
 
     //test
     console.log(resultNumber)
@@ -22,7 +22,7 @@ if (displayButton) {
 
 // 【占いスタート】ボタンが押されたときの関数
 function goToNextPage() {
-    const resultNumber = localStorage.getItem('resultNumber'); //結果の値を取得
+    const resultNumber = sessionStorage.getItem('resultNumber'); //結果の値を取得
     const fileName = numberToWord(resultNumber) + ".html"; //数値である結果の値を文字列に変換し.htmlを付ける
 
     redirectToFile(fileName); 

@@ -24,14 +24,14 @@ function addToVariable(button) {
 
     // selectA.htmlの場合は、料理配列を初期化する
     if (currentPage.includes("selectA.html")) {
-        localStorage.removeItem('whichButton');
+        sessionStorage.removeItem('whichButton');
     }
 
     // 料理配列に値を入れ
-    let whichButton = JSON.parse(localStorage.getItem('whichButton')) || [];
+    let whichButton = JSON.parse(sessionStorage.getItem('whichButton')) || [];
     whichButton.push(buttonData);
 
-    localStorage.setItem('whichButton', JSON.stringify(whichButton));
+    sessionStorage.setItem('whichButton', JSON.stringify(whichButton));
 }
 
 // class="btn"のボタンが押された場合

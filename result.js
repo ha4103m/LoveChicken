@@ -75,10 +75,7 @@ const combinations = [
 
 // ３つの選択からどの結果になるかを判別する関数
 function getResultFromWhichButton() {
-    let whichButton = JSON.parse(localStorage.getItem('whichButton')) || [];
-
-    //test
-    console.log(whichButton)
+    let whichButton = JSON.parse(sessionStorage.getItem('whichButton')) || [];
 
     // 料理配列が３つ以上の値が入っている場合
     if (whichButton.length >= 3) {
@@ -91,7 +88,7 @@ function getResultFromWhichButton() {
 
         // 結果の値が存在する場合
         if (result) {
-            JSON.parse(localStorage.setItem('resultNumber', result.result)); // 結果の値をresultNumberとして保存
+            JSON.parse(sessionStorage.setItem('resultNumber', result.result)); // 結果の値をresultNumberとして保存
             return result.result;
         } else {
             alert("該当する結果の値が見つかりません。")
