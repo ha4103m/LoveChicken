@@ -15,14 +15,11 @@
         <h2>～鶏肉らぶ～</h2>
     </div>
 
-    <!--ユーザが画面をクリックもしくは、５秒後に画面移動-->
+    <!--ユーザが画面をクリックしたら移動-->
     <script>
         function redirectToNextPage() {
             window.location.href = "selectA.html"; 
         }
-
-        setTimeout(redirectToNextPage, 5000);
-
         document.body.addEventListener("click", redirectToNextPage);
     </script>
 
