@@ -3,9 +3,6 @@
 function displayStoredResult() {
     const resultNumber = JSON.parse(sessionStorage.getItem('resultNumber'));
 
-    //test
-    console.log(resultNumber)
-
     const container = document.getElementById('output-container');
     container.innerHTML = '';
 
@@ -13,12 +10,6 @@ function displayStoredResult() {
     resultElement.textContent = resultNumber;  
     container.appendChild(resultElement);
 }
-
-// 「Show Button Data」ボタンが押された場合（テスト用）
-/*const displayButton = document.getElementById('displayResult');
-if (displayButton) {
-    displayButton.addEventListener('click', displayStoredResult);
-}*/
 
 // 【占いスタート】ボタンが押されたときの関数
 function goToNextPage() {
