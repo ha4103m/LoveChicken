@@ -2,7 +2,7 @@ body {
     font-family: HiraKakuProN;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
+    justify-content: flex-start; 
     align-items: center;
     height: 100vh;
     margin: 0;
