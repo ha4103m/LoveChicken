@@ -18,13 +18,15 @@ p{
     margin-top: 20px;
     padding-left: 30px;
     padding-right: 30px;
+	text-align: left;
+	display: inline-block;
 }
 
 div{
     padding: 20px 20px 20px 20px;
     margin: 20px 20px 20px 20px;
-    /*line-height: 25px;*/
     border-style: solid;
+    text-align: left;
     border: 1px solid #333333;
 }
 b{

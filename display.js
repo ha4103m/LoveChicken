@@ -27,7 +27,7 @@ function redirectToFile(fileName) {
 // 数値である結果の値を文字列に変換する関数
 function numberToWord(number) {
     const numbersToWords = [
-        "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven","tweleve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen","twenty","twenty-one","twenty-two","twenty-three","twenty-four","twenty-five","twenty-six","twenty-seven","twenty-eight","twenty-nine","thrity","thrity-one","thrity-two"
+        "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen","twenty","twenty-one","twenty-two","twenty-three","twenty-four","twenty-five","twenty-six","twenty-seven","twenty-eight","twenty-nine","thrity","thrity-one","thrity-two"
     ];
     return numbersToWords[number] || "invalid";
 }
