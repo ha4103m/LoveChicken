@@ -73,6 +73,7 @@ const combinations = [
     {a: 'a4', b: 'b4', c: 'c4', result: 7}
 ];
 
+// 【占いスタート画面】で＜Show Button Data＞ボタンを押すと、結果の数字を画面に表示する（テスト用）
 const displayButton = document.getElementById('displayResult');
 if (displayButton) {
     displayButton.addEventListener('click', getResultFromWhichButton);
@@ -93,7 +94,9 @@ function getResultFromWhichButton() {
         // 結果の値が存在する場合
         if (result) {
             sessionStorage.setItem('resultNumber', result.result); // 結果の値をresultNumberとして保存
-            displayStoredResult()
+            goToNextPage()
+            // (テスト用)
+            //displayStoredResult()
             return result.result;
         } else {
             alert("該当する結果の値が見つかりません。")
