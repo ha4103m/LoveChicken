@@ -28,7 +28,22 @@ h1{
 }
 
 .btn{
-    padding: 10px;
-    transition: width 0.3s ease, height 0.3s ease;
     width: 100%;
+}
+
+button{
+    display: block;
+    text-decoration: none;
+    width: auto;
+    border-radius: 100vh;
+    font-size: 20px;
+    padding: 10px 10px 10px 10px;
+    font-weight: bold;
+    border: 2px solid #F8CDC3;
+    color: #000;
+}
+  
+button:hover {
+    color: #fff;
+    background: #F8CDC3;
 }
