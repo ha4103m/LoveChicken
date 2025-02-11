@@ -1,7 +1,7 @@
 body {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; 
+    justify-content: center; 
     align-items: center;
     margin: 20px;
     background: url(./img/background.png);
@@ -11,4 +11,7 @@ body {
 
 .content{
     margin-bottom: 30px;
+}
+.content img{
+    width: 100%;
 }

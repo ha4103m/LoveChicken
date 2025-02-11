@@ -3,7 +3,6 @@ body {
     flex-direction: column;
     justify-content: flex-start; 
     align-items: center;
-    height: 100vh;
     margin: 20px;
     background-color: #F9F6F1;
     text-align: center; 
@@ -15,12 +14,21 @@ h1{
 }
 
 .opening{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 20px;
+    width: 100%;
+}
+
+.opening img{
+    width: 100%;
 }
 
 .content{
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+
+.btn{
+    padding: 10px;
+    transition: width 0.3s ease, height 0.3s ease;
+    width: 100%;
 }
