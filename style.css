@@ -1,11 +1,10 @@
 body {
-    font-family: HiraKakuProN;
     display: flex;
     flex-direction: column;
     justify-content: flex-start; 
     align-items: center;
     height: 100vh;
-    margin: 0;
+    margin: 20px;
     background-color: #F9F6F1;
     text-align: center; 
 }
@@ -21,3 +20,7 @@ h1{
     align-items: center;
 }
 
+.content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

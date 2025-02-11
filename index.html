@@ -4,23 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>起動画面</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
 </head>
 
 <body>
     <div class="content">
-        <img src="img/icon_chicken.png" alt="Chicken Icon">
-
-        <h1>おいしい性格診断</h1>
-        <h2>～鶏肉らぶ～</h2>
+        <img src="img/icon_index.png">
     </div>
 
-    <!--ユーザが画面をクリックしたら移動-->
+    <!--ユーザがボタンをクリックしたら移動-->
+    <img onclick="goToNextPage()" src="img/btn_start.png">
+
     <script>
-        function redirectToNextPage() {
+        function goToNextPage() {
             window.location.href = "selectA.html"; 
         }
-        document.body.addEventListener("click", redirectToNextPage);
     </script>
 
 </body>
