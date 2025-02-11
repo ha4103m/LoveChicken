@@ -32,3 +32,6 @@ div{
 b{
     font-weight: 900;
 }
+span{
+    text-indent: 1rem;
+}
