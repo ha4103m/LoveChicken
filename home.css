@@ -15,3 +15,8 @@ body {
 .opening img{
     width: 100%;
 }
+
+footer{
+    position: absolute;
+    bottom: 0;
+}
