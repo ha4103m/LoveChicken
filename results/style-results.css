@@ -20,6 +20,7 @@ p{
     padding-right: 30px;
 	text-align: left;
 	display: inline-block;
+    text-indent: 1rem;
 }
 
 div{
@@ -28,10 +29,11 @@ div{
     border-style: solid;
     text-align: left;
     border: 1px solid #333333;
+    text-indent: 1rem;
 }
 b{
     font-weight: 900;
 }
-span{
-    text-indent: 1rem;
+.back{
+    margin: 10px 0px 20px 0px;
 }
